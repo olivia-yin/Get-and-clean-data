@@ -5,7 +5,7 @@ getwd()
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
 download.file(url=fileUrl,destfile="2006_Idaho_housing.csv",mode="w",method="curl")
-housing<- (`2006_Idaho_housing`)
+housing<- (`2006_Idaho_housing.csv`)
 housing$VAL
 length(housing$VAL[!is.na(housing$VAL) & housing$VAL==24])
 
