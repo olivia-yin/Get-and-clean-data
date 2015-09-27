@@ -43,7 +43,6 @@ update_All$Activities
 update_All
 
 # Q5 Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-# Still working on it
-library(reshape)
-All_Melt <- melt(update_All, id = c("subject", "activity"))
+averagedata<-ddply(update_All,.(Subject,Activities),function(x) colMeans(x[,1:66]))
+write.table(averagedata,"average data.txt",row.names=FALSE)
 
